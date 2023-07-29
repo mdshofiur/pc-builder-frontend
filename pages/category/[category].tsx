@@ -2,6 +2,7 @@ import React from 'react';
 import ProductCard from '@/components/product-card';
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import type { GetStaticPaths } from 'next';
 
 const CategoryDetails = ({ products }: any) => {
    const router = useRouter();
@@ -32,7 +33,6 @@ export async function getStaticProps({
 }: {
    params: { category: string };
 }) {
-   console.log('params.category', params.category);
    try {
       const response = await axios.get(
          `http://localhost:2000/api/builder/products/${params.category.replace(
@@ -68,7 +68,7 @@ const featuredCategories = [
 ];
 
 // Define the paths for the featured categories
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
    const paths = featuredCategories.map((category) => ({
       params: { category: category.replace(/%20/g, ' ') },
    }));
@@ -76,4 +76,4 @@ export async function getStaticPaths() {
       paths,
       fallback: false,
    };
-}
+};
