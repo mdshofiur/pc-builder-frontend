@@ -9,7 +9,7 @@ const Navbar = () => {
                <div className='flex items-center justify-between'>
                   <div>
                      <Link href='/' className='text-white font-bold text-xl'>
-                        Your Logo
+                        PC Builder
                      </Link>
                   </div>
                   <div className='relative inline-block text-left group'>
@@ -19,37 +19,37 @@ const Navbar = () => {
                      <div className='origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100'>
                         <div className='py-1'>
                            <Link
-                              href='/cpu-processor'
+                              href={`/category/Processor`}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
                               CPU / Processor
                            </Link>
                            <Link
-                              href='/motherboard'
+                              href={`/category/Motherboard`}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
                               Motherboard
                            </Link>
                            <Link
-                              href='/ram'
+                              href={`/category/Ram`}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
                               RAM
                            </Link>
                            <Link
-                              href='/power-supply-unit'
+                              href={`/category/Power Supply`}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
                               Power Supply Unit
                            </Link>
                            <Link
-                              href='/storage-device'
+                              href={`/category/Storage`}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
                               Storage Device
                            </Link>
                            <Link
-                              href='/monitor'
+                              href={`/category/Monitor`}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
                               Monitor
                            </Link>
                            <Link
-                              href='/others'
+                              href={`/category/Others`}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100'>
                               Others
                            </Link>
