@@ -83,7 +83,9 @@ const Home = ({ featuredProducts }: HomeProps) => {
 export default Home;
 
 export async function getStaticProps() {
-   const response = await fetch('http://localhost:2000/api/builder');
+   const response = await fetch(
+      'https://pc-builder-backend-flax.vercel.app/api/builder',
+   );
    const featuredProducts = await response.json();
 
    return {

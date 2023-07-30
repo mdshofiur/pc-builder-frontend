@@ -73,7 +73,7 @@ export default SingleProduct;
 export const getStaticProps: GetStaticProps = async ({ params }) => {
    try {
       const response = await axios.get(
-         `http://localhost:2000/api/builder/${params?.id}`,
+         `https://pc-builder-backend-flax.vercel.app/api/builder/${params?.id}`,
       );
 
       const product = response.data;
@@ -92,7 +92,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-   const ipPaths = await axios.get('http://localhost:2000/api/builder');
+   const ipPaths = await axios.get(
+      'https://pc-builder-backend-flax.vercel.app/api/builder',
+   );
    const paths = ipPaths.data?.items?.map((product: { _id: string }) => ({
       params: { id: product._id },
    }));

@@ -35,7 +35,7 @@ export async function getStaticProps({
 }) {
    try {
       const response = await axios.get(
-         `http://localhost:2000/api/builder/products/${params.category.replace(
+         `https://pc-builder-backend-flax.vercel.app/api/builder/products/${params.category.replace(
             /%20/g,
             ' ',
          )}`,
