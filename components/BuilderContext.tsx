@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 
 interface SelectedComponents {
+   [key: string]: any;
    Processor: any;
    Motherboard: any;
    Ram: any;

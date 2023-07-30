@@ -20,7 +20,7 @@ const Navbar = () => {
                         <button className='text-white focus:outline-none capitalize'>
                            Categories
                         </button>
-                        <div className='origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100'>
+                        <div className='origin-top-right absolute right-0 mt- w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block opacity-0 group-hover:opacity-100 z-30'>
                            <div className='py-1'>
                               <Link
                                  href={`/category/Processor`}
