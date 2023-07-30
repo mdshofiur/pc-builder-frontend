@@ -48,7 +48,7 @@ const Home = ({ featuredProducts }: HomeProps) => {
                      {product.productName}
                   </h3>
                   <p>{product.category}</p>
-                  <p>Price: ${product.price}</p>
+                  <p>Price: {product.price}</p>
                   <p>{product.inStock ? 'In Stock' : 'Out of Stock'}</p>
                   <p>Rating: {product.averageRating}</p>
                   <Link
