@@ -18,7 +18,7 @@ const ProductCard = ({ product }: any) => {
          <p>{product.inStock ? 'In Stock' : 'Out of Stock'}</p>
          <p>Rating: {product.rating} Stars</p>
          <Link
-            href={`/product/${product._id}`}
+            href={`/${product._id}`}
             className='block mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'>
             View Details
          </Link>
